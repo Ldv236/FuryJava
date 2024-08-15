@@ -9,12 +9,12 @@ public class Main {
         // Операторы сравнения
         System.out.println("Операторы сравнения: money = " + money + ", price = " + price);
 
-        if (money > price) {
-            System.out.println("У вас достаточно денег для покупки.");
+        if (money == price) {
+            System.out.println("У вас ровно столько денег, сколько стоит товар.");
         } else if (money < price) {
             System.out.println("У вас недостаточно денег для покупки.");
-        } else if (money == price) {
-            System.out.println("У вас ровно столько денег, сколько стоит товар.");
+        } else if (money > price) {
+            System.out.println("У вас достаточно денег для покупки.");
         }
 
         if (money != price) {
