@@ -29,6 +29,7 @@ public class Clock {
 
     // Метод для получения времени в формате строки
     public String getTime() {
+        tick();
         return String.format("%02d:%02d", hour, minute);
     }
 
@@ -48,6 +49,10 @@ public class Clock {
         } else {
             throw new IllegalArgumentException("Minute must be between 0 and 59");
         }
+    }
+
+    private void tick() {
+        this.minute++;
     }
 
 

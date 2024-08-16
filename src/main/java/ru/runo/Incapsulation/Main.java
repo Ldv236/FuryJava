@@ -16,6 +16,9 @@ public class Main {
 
         // Чтение и вывод времени
         System.out.println("Updated time: " + clock.getTime());
+        System.out.println("Updated time: " + clock.getTime());
+        System.out.println("Updated time: " + clock.getTime());
+        System.out.println("Updated time: " + clock.getTime());
 
         // Попытка установить некорректное время (вызывает исключение)
         try {
