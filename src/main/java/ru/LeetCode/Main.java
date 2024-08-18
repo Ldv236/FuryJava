@@ -23,5 +23,10 @@ public class Main {
             }
         }
         System.out.println(digits);
+
+        System.out.println(Math.random());
+        System.out.println(Math.random());
+        System.out.println(Math.random());
+        System.out.println(Math.random());
     }
 }
