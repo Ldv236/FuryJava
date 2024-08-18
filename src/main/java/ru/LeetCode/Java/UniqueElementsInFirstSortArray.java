@@ -4,13 +4,13 @@ import java.util.Arrays;
 
 public class UniqueElementsInFirstSortArray {
     public static void main(String[] args) {
-        int[] array1 = {1, 3, 3};
-        int[] array2 = {1, 2, 4};
+        int[] array1 = {2, 3, 3};
+        int[] array2 = {1, 1, 3};
         System.out.println(Arrays.toString(findUniqueElements(array1, array2)));
     }
 
     public static int[] findUniqueElements(int[] array1, int[] array2) {
-        int[] tempResult = new int[array1.length];
+        int[] result = new int[array1.length];
         int left = 0;
         int right = 0;
         int resultIndex = 0;
@@ -25,13 +25,13 @@ public class UniqueElementsInFirstSortArray {
             } else if (array1[left] > array2[right]) {
                 right++;
             } else {
-                tempResult[resultIndex++] = array1[left++];
+                result[resultIndex++] = array1[left++];
             }
         }
 
         while (left < array1.length) {
-            tempResult[resultIndex++] = array1[left++];
+            result[resultIndex++] = array1[left++];
         }
-        return Arrays.copyOfRange(tempResult, 0, resultIndex);
+        return Arrays.copyOfRange(result, 0, resultIndex);
     }
 }
