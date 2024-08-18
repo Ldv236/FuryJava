@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class UniqueElementsInFirstSortArray {
     public static void main(String[] args) {
-        int[] array1 = {2, 3, 3};
-        int[] array2 = {1, 1, 3};
+        int[] array1 = {2, 3, 3, 3, 5, 9};
+        int[] array2 = {1, 1, 1, 3, 4};
         System.out.println(Arrays.toString(findUniqueElements(array1, array2)));
     }
 
