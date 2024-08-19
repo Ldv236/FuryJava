@@ -4,11 +4,15 @@ import java.util.Scanner;
 
 public class outIn {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
-        System.out.println("Введите свое имя: ");
-        String name = sc.nextLine();
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Привет, " + name);
+        System.out.println("Введите ваше имя:");
+        String name = scanner.nextLine();
+
+        System.out.println("Введите ваш возраст:");
+        int age = scanner.nextInt();
+
+        System.out.println("Обучающйся: " + name + ", " + age + " лет");
     }
 }
