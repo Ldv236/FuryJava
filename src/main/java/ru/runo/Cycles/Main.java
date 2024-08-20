@@ -42,7 +42,6 @@ public class Main {
             }
             System.out.println("Iteration " + m);
         }
-
         // Loop with continue example
         System.out.println("\nLoop with continue:");
         for (int n = 1; n <= 10; n++) {
