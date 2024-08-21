@@ -56,11 +56,14 @@ public class Main {
         double differenceD = x - y;
         double productD = x * y;
         double quotientD = x / y;
+        double remainderD = x % y;  // Остаток от деления
 
         System.out.println("Сложение (double): " + sumD);
         System.out.println("Вычитание (double): " + differenceD);
         System.out.println("Умножение (double): " + productD);
         System.out.println("Деление (double): " + quotientD);
+        System.out.println("Остаток от деления (double): " + remainderD);
+        System.out.println("Инкремент a: " + a++);
 
         // Операции с символами
         char char1 = 'A';
