@@ -1,4 +1,4 @@
-package ru.runo.Condition.LogicOperators;
+package ru.lessons24.Condition.LogicOperators;
 
 public class Main {
     public static void main(String[] args) {

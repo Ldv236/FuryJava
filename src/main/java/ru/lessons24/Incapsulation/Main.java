@@ -1,4 +1,4 @@
-package ru.runo.Incapsulation;
+package ru.lessons24.Incapsulation;
 
 public class Main {
     public static void main(String[] args) {

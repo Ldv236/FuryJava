@@ -1,4 +1,4 @@
-package ru.runo.Incapsulation;
+package ru.lessons24.Incapsulation;
 
 public class Clock {
     // Закрытые поля для хранения времени

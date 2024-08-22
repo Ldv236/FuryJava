@@ -1,7 +1,8 @@
-package ru.runo.Strings;
+package ru.lessons24.Strings;
 
 public class Main {
     public static void main(String[] args) {
+        // Сравнение, пул строк
         // Создание строки с помощью литерала
         String sL1 = "Hello";
         String sL2 = "Hello";
@@ -25,6 +26,8 @@ public class Main {
         // Сравнение после применения intern()
         System.out.println("sL1 == strInterned : " + (sL1 == strInterned)); // true
 
+
+
         // ИММУТАБЕЛЬНОСТЬ
         // Создаем строку с помощью литерала
         String str = "Hello";
@@ -43,6 +46,7 @@ public class Main {
 
 
 
+
         // РАЗНЫЕ МЕТОДЫ
         str = "Hello, World!";
 
@@ -58,25 +62,9 @@ public class Main {
         int indexOf = str.indexOf("World");
         System.out.println("Index of 'World': " + indexOf); // Output: 7
 
-        // 4. substring(int beginIndex, int endIndex) - Возвращает подстроку
-        String substring = str.substring(7, 12);
-        System.out.println("Substring from index 7 to 12: " + substring); // Output: World
-
         // 5. equalsIgnoreCase(String another) - Сравнивает строки без учета регистра
         String anotherStr = "hello, world!";
         boolean isEqualIgnoreCase = str.equalsIgnoreCase(anotherStr);
         System.out.println("Strings are equal ignoring case: " + isEqualIgnoreCase); // Output: true
-
-        // 6. toUpperCase() - Преобразует все символы строки в верхний регистр
-        String upperCaseStr = str.toUpperCase();
-        System.out.println("String in uppercase: " + upperCaseStr); // Output: HELLO, WORLD!
-
-        // 7. toLowerCase() - Преобразует все символы строки в нижний регистр
-        String lowerCaseStr = str.toLowerCase();
-        System.out.println("String in lowercase: " + lowerCaseStr); // Output: hello, world!
-
-        // 8. replace(CharSequence target, CharSequence replacement) - Заменяет все вхождения подстроки
-        String replacedStr = str.replace("World", "Java");
-        System.out.println("Replaced 'World' with 'Java': " + replacedStr); // Output: Hello, Java!
     }
 }

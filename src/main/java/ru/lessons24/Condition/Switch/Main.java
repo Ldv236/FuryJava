@@ -1,4 +1,4 @@
-package ru.runo.Condition.Switch;
+package ru.lessons24.Condition.Switch;
 
 import java.util.Random;
 

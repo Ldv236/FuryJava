@@ -1,4 +1,4 @@
-package ru.runo.Cycles;
+package ru.lessons24.Cycles;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package ru.runo.types;
+package ru.lessons24.types;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

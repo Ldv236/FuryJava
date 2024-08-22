@@ -1,4 +1,4 @@
-package ru.runo;
+package ru.lessons24;
 
 import java.util.Scanner;
 

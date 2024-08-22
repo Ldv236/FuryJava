@@ -1,4 +1,4 @@
-package ru.runo.Condition.IfElse;
+package ru.lessons24.Condition.IfElse;
 
 public class Main {
     public static void main(String[] args) {
