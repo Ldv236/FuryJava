@@ -1,11 +1,6 @@
 package ru.ldv236.streamApi;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.IntSummaryStatistics;
-import java.util.List;
-import java.util.Map;
-import java.util.LinkedHashMap;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class StreamWithPersons {
@@ -159,5 +154,18 @@ public class StreamWithPersons {
                 .noneMatch(p -> p.getAge() < 18);
 
         System.out.println("Are there no children? " + noChildren);
+
+
+
+
+        List<String> namess = List.of("Alice", "Daniel", "Ivan", "Irina", "Ruck", "Dima");
+
+        List<String> result = namess.stream()
+                .filter(n -> n.startsWith("D"))
+                .sorted(Comparator.reverseOrder())
+                .map(name -> name.toUpperCase())
+                .collect(Collectors.toList());
+
+        System.out.println(result);
     }
 }
