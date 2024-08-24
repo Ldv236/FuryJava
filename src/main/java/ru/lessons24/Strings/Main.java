@@ -66,5 +66,23 @@ public class Main {
         String anotherStr = "hello, world!";
         boolean isEqualIgnoreCase = str.equalsIgnoreCase(anotherStr);
         System.out.println("Strings are equal ignoring case: " + isEqualIgnoreCase); // Output: true
+
+
+        // КЛАССЫ-ОБЕРТКИ    WRAPPER
+        int number = 10;
+        Integer intWrapper = number;
+        System.out.println(intWrapper);
+
+        int newNumber = intWrapper;
+        System.out.println(newNumber);
+
+        int maxInt = Integer.MAX_VALUE;
+        int minInt = Integer.MIN_VALUE;
+        System.out.println("maxInt: " + maxInt + ", minInt: " + minInt);
+
+        String numStr = "123";
+        int parsedInt = Integer.parseInt(numStr);
+        double parsedDouble = Double.parseDouble(numStr);
+        System.out.println("Parsed int: " + parsedInt + ", Parsed double: " + parsedDouble);
     }
 }
