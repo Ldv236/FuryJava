@@ -24,13 +24,25 @@ public class Main {
             k++;
         } while (k <= 5);
 
-        // Nested loop example (multiplication table)
-        System.out.println("\nNested loop (Multiplication table):");
-        for (int a = 1; a <= 5; a++) {
-            for (int b = 1; b <= 5; b++) {
-                System.out.print(a * b + "\t");
+        boolean flag = true;
+        while (flag) {
+            System.out.println("Итерация № " + j);
+            j++;
+            if (j > 10) {
+                flag = false;
+                System.out.println("Выход из цикла");
             }
-            System.out.println(); // New line after each row
+        }
+
+        // Nested loop example
+        System.out.println("\nNested loop ");
+        for (int a = 0; a < 3; a++) {
+            for (int b = 0; b < 3; b++) {
+                System.out.println(a + " " + b);
+                if (a == b) {
+                    System.out.println("совпадение");
+                }
+            }
         }
 
         // Loop with break example
@@ -66,5 +78,18 @@ public class Main {
             }
             System.out.println("Итерация № " + i);
         }
+
+        byte b = 0;
+//        while (true) {
+//            System.out.println("Byte value: " + b);
+//            b++; // Инкрементируем переменную b
+//
+//            // Задержка в 50 миллисекунд
+//            try {
+//                Thread.sleep(50);
+//            } catch (InterruptedException e) {
+//                System.out.println("Thread interrupted: " + e.getMessage());
+//            }
+//        }
     }
 }
