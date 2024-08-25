@@ -9,7 +9,7 @@ public class Main {
             System.out.println("Шапка");
         } else { //сначала без элс
             //сначала ничего не делаем, а потом
-            System.out.println("Надо надеть кепку");
+                System.out.println("Надо надеть кепку");
         }
 
         isCold = false;

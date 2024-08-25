@@ -69,6 +69,6 @@ public class Main {
 //            throw new IllegalArgumentException("Age cannot be negative");
             throw new BadAgeException("Age cannot be negative");
         }
-        System.out.println("Age is valid: " + age);
+        System.out.println("Возраст проверен: " + age);
     }
 }

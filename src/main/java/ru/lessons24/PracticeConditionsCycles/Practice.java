@@ -1,4 +1,4 @@
-package ru.lessons24.PracticeChaper2;
+package ru.lessons24.PracticeConditionsCycles;
 
 public class Practice {
     public static void main(String[] args) {

@@ -22,9 +22,9 @@ public class Main {
         System.out.println("sL1.equals(sC1) : " + sL1.equals(sC1)); // true
 
         // Применение метода intern()
-        String strInterned = sC1.intern();
+        sC1 = sC1.intern();
         // Сравнение после применения intern()
-        System.out.println("sL1 == strInterned : " + (sL1 == strInterned)); // true
+        System.out.println("sL1 == strInterned : " + (sL1 == sC1)); // true
 
 
 

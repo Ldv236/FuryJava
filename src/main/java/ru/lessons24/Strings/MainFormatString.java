@@ -3,25 +3,23 @@ package ru.lessons24.Strings;
 public class MainFormatString {
     public static void main(String[] args) {
         // ПРЕОБРАЗОВАНИЕ
-        String str = "Hello, World!";
+        String helloString = "Hello, World!";
 
         // 4. substring(int beginIndex, int endIndex) - Возвращает подстроку
-        String substring = str.substring(7, 12);
+        String substring = helloString.substring(7, 12);
         System.out.println("Substring from index 7 to 12: " + substring); // Output: World
 
         // 6. toUpperCase() - Преобразует все символы строки в верхний регистр
-        String upperCaseStr = str.toUpperCase();
+        String upperCaseStr = helloString.toUpperCase();
         System.out.println("String in uppercase: " + upperCaseStr); // Output: HELLO, WORLD!
 
         // 7. toLowerCase() - Преобразует все символы строки в нижний регистр
-        String lowerCaseStr = str.toLowerCase();
+        String lowerCaseStr = helloString.toLowerCase();
         System.out.println("String in lowercase: " + lowerCaseStr); // Output: hello, world!
 
         // 8. replace(CharSequence target, CharSequence replacement) - Заменяет все вхождения подстроки
-        String replacedStr = str.replace("World", "Java");
+        String replacedStr = helloString.replace("World", "Java");
         System.out.println("Replaced 'World' with 'Java': " + replacedStr); // Output: Hello, Java!
-
-        String nnn = String.format("%d", 5);
 
 
 
@@ -41,7 +39,7 @@ public class MainFormatString {
         System.out.println("String.format(): " + formattedString);
         // Output: String.format(): Name: Alice, Age: 25, Salary: 1234.56
 
-        // 3. Форматирование с использованием str.formatted()
+        // 3. Форматирование с использованием helloString.formatted()
         String template = "Name: %s, Age: %d, Salary: %.2f";
         String formattedUsingTemplate = template.formatted(name, age, salary);
         System.out.println("formatted(): " + formattedUsingTemplate);
