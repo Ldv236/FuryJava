@@ -30,6 +30,6 @@ public class Homework {
 
         chars[1] = scanner.nextLine().charAt(0);
         input = input.replace(chars[0], chars[1]);
-        System.out.println("Result replaced string: " + input);
+        System.out.println(input);
     }
 }
