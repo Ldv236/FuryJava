@@ -118,6 +118,13 @@ public class Main {
 
 
         // ПОТЕРЯ ТОЧНОСТИ !!!!!11
+        double oneDec = 0.1;
+        double twoDec = 0.2;
+        double doubleSum = oneDec + twoDec;
+        System.out.println("Потеря точности при суммировании даблов: " + doubleSum);
+        double doubleDifference = twoDec * oneDec;
+        System.out.println("Потеря точности при умножении даблов: " + doubleDifference);
+
         // Создание объектов BigDecimal - способ 1
         BigDecimal aa = new BigDecimal("0.1");
         BigDecimal bb = new BigDecimal("0.2");
@@ -129,10 +136,9 @@ public class Main {
         System.out.println("BigDecimal a + b = " + summ);
         // Деление с указанием масштаба и режима округления
         BigDecimal c = new BigDecimal("1.0");
-        BigDecimal d = new BigDecimal("3.0");
+        BigDecimal d = new BigDecimal("3.6");
         BigDecimal result = c.divide(d, 10, RoundingMode.HALF_UP); // Округление до 10 знаков после запятой
-        System.out.println("BigDecimal 1.0 / 3.0 = " + result);
-
+        System.out.println("BigDecimal 1.0 / 3.6 = " + result);
 
         // Спосбоб 2
         // Масштабируем числа перед выполнением арифметических операций
@@ -150,7 +156,7 @@ public class Main {
 
         // Другой пример - деление
         double xx = 1.0;
-        double yy = 3.7;  // y теперь не является целым числом
+        double yy = 3.6;  // y теперь не является целым числом
 
         // Выбираем достаточно большой масштаб (например, 10^6)
         int scale = 1000000;
