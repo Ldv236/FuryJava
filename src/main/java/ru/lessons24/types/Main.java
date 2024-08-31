@@ -65,6 +65,9 @@ public class Main {
         System.out.println("Остаток от деления (double): " + remainderD);
         System.out.println("Инкремент a: " + a++);
 
+
+
+
         // Операции с символами
         char char1 = 'A';
         char char2 = 'B';
@@ -74,9 +77,6 @@ public class Main {
 
         System.out.println("Сумма символов (как int): " + charSum);
         System.out.println("Следующий символ после 'A': " + nextChar);
-
-
-
 
 
         // ПРИВЕДЕНИЕ ТИПОВ !!!!!!!!!!11
@@ -92,6 +92,28 @@ public class Main {
         // Явное приведение типов (сужение типа)
         double doubleValue = 9.78;
         int intFromDouble = (int) doubleValue; // Явное приведение double к int, дробная часть отбрасывается
+
+        //сначала 100 97 3, всё норм, потом такие цифры
+        int allFeedbackCount = 66;
+        int goodFeedbackCount = 64;
+        int badFeedbackCount = 2;
+        //сначала *100 в конце, почему же не работает?
+        //потом перенести 100, увидеть что процент потерялся ((( пичаль
+//        int goodFeedbackPercent = goodFeedbackCount * 100 / allFeedbackCount;
+//        int badFeedbackPercent = badFeedbackCount * 100 / allFeedbackCount;
+        // попробовать с даблами и 100.0, увидеть что норм считает всё
+        double goodFeedbackPercent = goodFeedbackCount * 100.0 / allFeedbackCount;
+        double badFeedbackPercent = badFeedbackCount * 100.0 / allFeedbackCount;
+        // перевести в инт и офигеть что теряется дробная часть, что же делать
+        // округлить с помощью Math
+        int goodFeedbackPercentInt = (int) Math.round(goodFeedbackPercent);
+        int badFeedbackPercentInt = (int) Math.round(badFeedbackPercent);
+        System.out.println("Всего отзывов - " + allFeedbackCount +
+                "\nХороших отзывов (double) - " + goodFeedbackPercent + "%" +
+                "\nПлохих отзывов (double) - " + badFeedbackPercent + "%"+
+                "\nХороших отзывов (int) - " + goodFeedbackPercentInt + "%" +
+                "\nПлохих отзывов (int) - " + badFeedbackPercentInt + "%");
+
 
         System.out.println("doubleValue: " + doubleValue);
         System.out.println("intFromDouble (явное приведение): " + intFromDouble);
@@ -172,5 +194,7 @@ public class Main {
 
         // Вывод результата
         System.out.println("Масштабируемое деление " + xx + " / " + yy + " = " + finalResult);
+
+
     }
 }
