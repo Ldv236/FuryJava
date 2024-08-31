@@ -93,6 +93,10 @@ public class Main {
         double doubleValue = 9.78;
         int intFromDouble = (int) doubleValue; // Явное приведение double к int, дробная часть отбрасывается
 
+        System.out.println("doubleValue: " + doubleValue);
+        System.out.println("intFromDouble (явное приведение): " + intFromDouble);
+
+
         //сначала 100 97 3, всё норм, потом такие цифры
         int allFeedbackCount = 66;
         int goodFeedbackCount = 64;
@@ -110,13 +114,10 @@ public class Main {
         int badFeedbackPercentInt = (int) Math.round(badFeedbackPercent);
         System.out.println("Всего отзывов - " + allFeedbackCount +
                 "\nХороших отзывов (double) - " + goodFeedbackPercent + "%" +
-                "\nПлохих отзывов (double) - " + badFeedbackPercent + "%"+
+                "\nПлохих отзывов (double) - " + badFeedbackPercent + "%" +
                 "\nХороших отзывов (int) - " + goodFeedbackPercentInt + "%" +
                 "\nПлохих отзывов (int) - " + badFeedbackPercentInt + "%");
 
-
-        System.out.println("doubleValue: " + doubleValue);
-        System.out.println("intFromDouble (явное приведение): " + intFromDouble);
 
         // Приведение типов с потерей данных
         int largeInt = 150;
