@@ -1,4 +1,4 @@
-package ru.lessons24.OOP.Polymorph;
+package ru.lessons24.OOP.Abstraction;
 
 import java.util.Scanner;
 
