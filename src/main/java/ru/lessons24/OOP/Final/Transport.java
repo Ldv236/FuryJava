@@ -1,4 +1,4 @@
-package ru.lessons24.OOP.Abstraction;
+package ru.lessons24.OOP.Final;
 
 public abstract class Transport implements Movable {
     protected String model;
@@ -10,8 +10,8 @@ public abstract class Transport implements Movable {
         this.year = year;
     }
 
-    // Метод для описания транспорта
-    public void describe() {
+    // Сделать финальным типа нехуй, именно такой формат нужен, показать в подклассах, убрать нахер
+    public final void describe() {
         System.out.println("Transport: " + model + " (" + year + ")");
     }
 

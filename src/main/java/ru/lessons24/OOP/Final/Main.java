@@ -1,11 +1,16 @@
-package ru.lessons24.OOP.Abstraction;
+package ru.lessons24.OOP.Final;
 
 import java.util.Scanner;
 
 public class Main {
+    public static final int STEP_TO_WIN = 3;
+
     public static void main(String[] args) {
-        // показать сначала что ок, а потом с абстрактным нифига
-//        Transport someTransport = new Transport("Lada", 2020);
+        // сделать классы финальными и показать что наследовать не получается и значки
+        // потом метод сабскрайб в транспорте тоже
+        // потом константу уже ввести и показать что нельзя поменять, но использовать в практике уже
+        /*System.out.println("Шагов для победы - " + STEP_TO_WIN);
+        STEP_TO_WIN = 5;*/
 
         // Создаем объекты разных типов ДЛЯ ИГРЫ, чтобы в игре двигать любой объект одними и теми же кнопками (клавишами)
         Movable car = new Car("Tesla Model S", 2022, 4);

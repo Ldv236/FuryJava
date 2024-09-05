@@ -1,4 +1,4 @@
-package ru.lessons24.OOP.Abstraction;
+package ru.lessons24.OOP.Practice42;
 
 public class Truck extends Transport {
     private int loadCapacity;
@@ -16,6 +16,7 @@ public class Truck extends Transport {
     // переопред наслед из мувбл через Транспорт
     @Override
     public void start() {
+        steps++;  // Увеличиваем количество шагов при старте
         System.out.println("Truck " + model + " is starting with capacity " + loadCapacity + " tons.");
     }
 

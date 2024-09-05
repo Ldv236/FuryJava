@@ -1,4 +1,4 @@
-package ru.lessons24.OOP.Abstraction;
+package ru.lessons24.OOP.Practice42;
 
 public class Car extends Transport {
     private int doors;
@@ -16,6 +16,7 @@ public class Car extends Transport {
     // переопред наслед из мувбл через Транспорт
     @Override
     public void start() {
+        steps++;  // Увеличиваем количество шагов при старте
         System.out.println("Car " + model + " with " + doors + " doors is starting.");
     }
 

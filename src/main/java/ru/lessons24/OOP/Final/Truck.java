@@ -1,6 +1,6 @@
-package ru.lessons24.OOP.Abstraction;
+package ru.lessons24.OOP.Final;
 
-public class Truck extends Transport {
+public final class Truck extends Transport {
     private int loadCapacity;
 
     public Truck(String model, int year, int loadCapacity) {
@@ -8,10 +8,10 @@ public class Truck extends Transport {
         this.loadCapacity = loadCapacity;
     }
 
-    @Override
-    public void describe() {
-        System.out.println("Truck: " + model + " (" + year + "), Load Capacity: " + loadCapacity + " kg");
-    }
+//    @Override
+//    public void describe() {
+//        System.out.println("Truck: " + model + " (" + year + "), Load Capacity: " + loadCapacity + " kg");
+//    }
 
     // переопред наслед из мувбл через Транспорт
     @Override
