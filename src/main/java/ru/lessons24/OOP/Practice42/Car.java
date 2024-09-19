@@ -15,15 +15,10 @@ public class Car extends Transport {
 
     // переопред наслед из мувбл через Транспорт
     @Override
-    public void start() {
-        steps++;  // Увеличиваем количество шагов при старте
+    public void start(int stepCount) {
+//        steps++;  // Увеличиваем количество шагов при старте
+        steps += stepCount;  // Увеличиваем количество шагов при старте
         System.out.println("Car " + model + " with " + doors + " doors is starting.");
-    }
-
-    // переопред наслед из мувбл через Транспорт
-    @Override
-    public void stop() {
-        System.out.println("Car " + model + " is stopping.");
     }
 
     public void honk() {

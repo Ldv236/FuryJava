@@ -22,15 +22,6 @@ public class Car extends Transport {
         System.out.println("Beep! Beep!");
     }
 
-//    @Override
-//    public String toString() {
-//        return "Car{" +
-//                "doors=" + doors +
-//                ", model='" + model + '\'' +
-//                ", year=" + year +
-//                '}';
-//    }
-
     // Переопределение toString() с вызовом родительского метода
     @Override
     public String toString() {

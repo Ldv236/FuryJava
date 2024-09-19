@@ -20,14 +20,6 @@ public class Transport {
         System.out.println(model + " is starting to move.");
     }
 
-//    @Override
-//    public String toString() {
-//        return "Transport{" +
-//                "model='" + model + '\'' +
-//                ", year=" + year +
-//                '}';
-//    }
-
     // Переопределение toString() для базовых полей
     @Override
     public String toString() {

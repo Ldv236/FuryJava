@@ -19,12 +19,6 @@ public final class Truck extends Transport {
         System.out.println("Truck " + model + " is starting with capacity " + loadCapacity + " tons.");
     }
 
-    // переопред наслед из мувбл через Транспорт
-    @Override
-    public void stop() {
-        System.out.println("Truck " + model + " is stopping.");
-    }
-
     public void load() {
         System.out.println("Loading the truck with capacity: " + loadCapacity + " kg");
     }

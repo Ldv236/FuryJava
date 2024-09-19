@@ -10,19 +10,19 @@ public class Human implements Movable {
 
     // переопред из мувбл
     @Override
-    public void start() {
-        steps++;  // Увеличиваем количество шагов при старте
+    public void start(int stepCount) {
+//        steps++;  // Увеличиваем количество шагов при старте
+        steps += stepCount;  // Увеличиваем количество шагов при старте
         System.out.println(name + " starts walking.");
-    }
-
-    // переопред из мувбл
-    @Override
-    public void stop() {
-        System.out.println(name + " stops walking.");
     }
 
     @Override
     public int getSteps() {
         return steps;
+    }
+
+    @Override
+    public String toString() {
+        return "Name - " + name;
     }
 }

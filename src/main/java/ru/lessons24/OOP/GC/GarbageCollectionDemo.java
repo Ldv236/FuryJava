@@ -1,14 +1,12 @@
 package ru.lessons24.OOP.GC;
 
 public class GarbageCollectionDemo {
+    private int id;
 
-    // Конструктор
     public GarbageCollectionDemo(int id) {
         this.id = id;
         System.out.println("Object " + id + " created.");
     }
-
-    private int id;
 
     // Переопределяем finalize() для демонстрации удаления объектов
     @Override

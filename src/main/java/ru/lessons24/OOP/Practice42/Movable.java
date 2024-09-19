@@ -1,8 +1,9 @@
 package ru.lessons24.OOP.Practice42;
 
 public interface Movable {
-    void start();
-    void stop();
+//    void start();
+    void start(int stepCount);
+
     // добавим подсчет количества объектов каждого типа и подсчет шагов в каждый объект
     // а в метод подсветки позиции вызов получения этих самых шагов
     int getSteps();

@@ -1,17 +1,16 @@
 package ru.ldv236.collections;
 
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 
 public class HashMapExample {
     void touchHashMap() {
-        Map<String, Integer> map = new HashMap<>();
+        Map<String, Integer> map = new TreeMap<>();
 
         // Добавление элементов
         map.put("понедельник", 1);
         map.put("вторник", 2);
         map.put("среда", 3);
+        Deque deque = new ArrayDeque<>();
 
         System.out.println("Initial map: " + map);
 

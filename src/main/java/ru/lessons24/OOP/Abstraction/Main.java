@@ -39,6 +39,6 @@ public class Main {
     // Универсальный метод для работы с объектами через интерфейс Movable
     public static void moveAnyMovableObject(Movable movable) {
         movable.start(); // Вызываем метод start через интерфейс
-        movable.stop();  // Вызываем метод stop через интерфейс
+        movable.highlightPosition();
     }
 }

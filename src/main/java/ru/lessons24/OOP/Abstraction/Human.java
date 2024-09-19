@@ -12,10 +12,4 @@ public class Human implements Movable {
     public void start() {
         System.out.println(name + " starts walking.");
     }
-
-    // переопред из мувбл
-    @Override
-    public void stop() {
-        System.out.println(name + " stops walking.");
-    }
 }

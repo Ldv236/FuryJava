@@ -23,26 +23,32 @@ public class Main {
         Movable someMovable;
         while (isGameEnd) {
             System.out.print("Какую игровую фигуру двигаем: ");
-            String movableObjectName = in.nextLine();
-            someMovable = switch (movableObjectName) {
+            String movableObject = in.nextLine();
+
+            String[] movableArray = movableObject.split(" ");
+
+            someMovable = switch (movableArray[0]) {
                 case "car" -> car;
                 case "truck" -> truck;
                 case "human" -> human;
                 default -> null;
             };
-            moveAnyMovableObject(someMovable);
+
+            int stepCount = Integer.parseInt(movableArray[1]);
+
+            moveAnyMovableObject(someMovable, stepCount);
             System.out.println("**************");
         }
     }
 
     // Универсальный метод для работы с объектами через интерфейс Movable
-    public static void moveAnyMovableObject(Movable movable) {
-        movable.start(); // Вызываем метод start через интерфейс
+    public static void moveAnyMovableObject(Movable movable, int stepCount) {
+        movable.start(stepCount); // Вызываем метод start через интерфейс
         movable.highlightPosition();   // Подсвечиваем положение объекта
-        movable.stop();  // Вызываем метод stop через интерфейс
 
         //переносим из метода мейн, чтобы использовать в других методах
-        if (movable.getSteps() == STEP_TO_WIN) {
+//        if (movable.getSteps() == STEP_TO_WIN) {
+        if (movable.getSteps() >= STEP_TO_WIN) {
             finishAndShowResults(movable);
         }
     }

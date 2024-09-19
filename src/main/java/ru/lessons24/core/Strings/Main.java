@@ -67,6 +67,38 @@ public class Main {
         boolean isEqualIgnoreCase = str.equalsIgnoreCase(anotherStr);
         System.out.println("Strings are equal ignoring case: " + isEqualIgnoreCase); // Output: true
 
+        str = "Hello, World!";
+        // Проверка, начинается ли строка с "Hello"
+        if (str.startsWith("Hello")) {
+            System.out.println("Строка начинается с 'Hello'");
+        } else {
+            System.out.println("Строка не начинается с 'Hello'");
+        }
+        // Проверка, заканчивается ли строка на "World!"
+        if (str.endsWith("World!")) {
+            System.out.println("Строка заканчивается на 'World!'");
+        } else {
+            System.out.println("Строка не заканчивается на 'World!'");
+        }
+
+        // Проверка, начинается ли подстрока с индекса 7 с "World"
+        if (str.startsWith("World", 7)) {
+            System.out.println("Подстрока с индекса 7 начинается с 'World'");
+        } else {
+            System.out.println("Подстрока с индекса 7 не начинается с 'World'");
+        }
+
+        //работа цтклом со строкой, можно еще подсчет сделать чего больше - цифр или символов
+        // !!!!!!!!! дать им сделать подсчет самим и рулеткой выбрать кто будет писать лайвкод !!!
+        String text = "1q23we";
+        for (int i = 0; i < text.length(); i++) {
+            if (Character.isDigit(text.charAt(i))) {
+                System.out.print("digit ");
+            } else if (Character.isLetter(text.charAt(i))) {
+                System.out.print("letter ");
+            }
+            System.out.print(Character.toUpperCase(text.charAt(i)) + " ");
+        }
 
         // КЛАССЫ-ОБЕРТКИ    WRAPPER
         int number = 10;
@@ -84,5 +116,6 @@ public class Main {
         int parsedInt = Integer.parseInt(numStr);
         double parsedDouble = Double.parseDouble(numStr);
         System.out.println("Parsed int: " + parsedInt + ", Parsed double: " + parsedDouble);
+
     }
 }

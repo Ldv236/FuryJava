@@ -17,17 +17,15 @@ public abstract class Transport implements Movable {
     }
 
     // переопред из мувбл
-    @Override
-    public void start() {
-        steps++;  // Увеличиваем количество шагов при старте
-        System.out.println(model + " is starting.");
-    }
+//    @Override
+//    public void start() {
+//        steps++;  // Увеличиваем количество шагов при старте
+//        System.out.println(model + " is starting.");
+//    }
 
     // переопред из мувбл
     @Override
-    public void stop() {
-        System.out.println(model + " is stopping.");
-    }
+    abstract public void start(int stepCount);
 
     @Override
     public int getSteps() {

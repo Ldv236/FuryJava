@@ -21,12 +21,6 @@ public abstract class Transport implements Movable {
         System.out.println(model + " is starting.");
     }
 
-    // переопред из мувбл
-    @Override
-    public void stop() {
-        System.out.println(model + " is stopping.");
-    }
-
     // Переопределение toString() для базовых полей
     @Override
     public String toString() {

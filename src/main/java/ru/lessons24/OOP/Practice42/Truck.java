@@ -15,15 +15,10 @@ public class Truck extends Transport {
 
     // переопред наслед из мувбл через Транспорт
     @Override
-    public void start() {
-        steps++;  // Увеличиваем количество шагов при старте
+    public void start(int stepCount) {
+//        steps++;  // Увеличиваем количество шагов при старте
+        steps += stepCount;  // Увеличиваем количество шагов при старте
         System.out.println("Truck " + model + " is starting with capacity " + loadCapacity + " tons.");
-    }
-
-    // переопред наслед из мувбл через Транспорт
-    @Override
-    public void stop() {
-        System.out.println("Truck " + model + " is stopping.");
     }
 
     public void load() {

@@ -19,12 +19,6 @@ public class Car extends Transport {
         System.out.println("Car " + model + " with " + doors + " doors is starting.");
     }
 
-    // переопред наслед из мувбл через Транспорт
-    @Override
-    public void stop() {
-        System.out.println("Car " + model + " is stopping.");
-    }
-
     public void honk() {
         System.out.println("Beep! Beep!");
     }

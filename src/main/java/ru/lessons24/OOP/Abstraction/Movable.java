@@ -2,7 +2,6 @@ package ru.lessons24.OOP.Abstraction;
 
 public interface Movable {
     void start();
-    void stop();
 
     // потом добавляем метод, все классы в ахуе, меняем его на дефолтный
     // для подсветки положения объекта на игровом поле
