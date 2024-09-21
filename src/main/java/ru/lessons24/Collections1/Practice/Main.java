@@ -56,7 +56,14 @@ public class Main {
     // 2. Метод поиска общих элементов строк
     public static List<String> findCommonElements(List<String> list1, List<String> list2) {
         ArrayList<String> commonElements = new ArrayList<>(list1);
-        commonElements.retainAll(list2); // Оставляем только общие элементы
+        for (String str : list1) {
+            for (String str2 : list2) {
+                if (str.equals(str2)) {
+                    commonElements.add(str);
+                }
+            }
+        }
+//        commonElements.retainAll(list2); // Оставляем только общие элементы
         return commonElements;
     }
 

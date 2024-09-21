@@ -1,5 +1,9 @@
 package ru.lessons24.Diplom;
 
+import ru.lessons24.Diplom.Model.Book;
+import ru.lessons24.Diplom.Model.Library;
+import ru.lessons24.Diplom.Model.User;
+
 import java.util.List;
 import java.util.Map;
 
@@ -58,13 +62,15 @@ public class Main {
         borrowBook(2, 1);
         System.out.println();
 
-        Map<User, Integer> userActivity = library.getUserActivity();
-        for (Map.Entry<User, Integer> entry : userActivity.entrySet()) {
-            System.out.println(entry.getKey() + " - всего брал книг: " + entry.getValue());
-        }
+//        Map<User, Integer> userActivity = library.getUserActivity();
+//        for (Map.Entry<User, Integer> entry : userActivity.entrySet()) {
+//            System.out.println(entry.getKey() + " - всего брал книг: " + entry.getValue());
+//        }
 //        userActivity.entrySet().stream().forEach(e -> System.out.println(e.getKey() + " - всего брал книг: " + e.getValue()));
 //        userActivity.entrySet().forEach(e -> System.out.println(e.getKey() + " - всего брал книг: " + e.getValue()));
 //        userActivity.forEach((key, value) -> System.out.println(key + " - всего брал книг: " + value));
+        Map<Integer, List<User>> userActivity = library.getUserActivity();
+        userActivity.forEach((key, value) -> System.out.println(key + " - книг брали: " + value));
         System.out.println();
 
         Map<User, Integer> userBooksCount = library.getUserBooksCount();

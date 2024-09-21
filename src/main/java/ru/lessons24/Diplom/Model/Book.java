@@ -1,4 +1,4 @@
-package ru.lessons24.Diplom;
+package ru.lessons24.Diplom.Model;
 
 public class Book {
     private final int id;

@@ -1,4 +1,4 @@
-package ru.lessons24.Diplom;
+package ru.lessons24.Diplom.Exception;
 
 public class UserNotFoundException extends RuntimeException {
 

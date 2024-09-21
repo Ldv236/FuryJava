@@ -27,14 +27,12 @@ public class Main {
         for (int i = 0; i < 3 && !students.isEmpty(); i++) {
             // Случайный водитель (без проверки, ездил ли он уже)
             String driver = drivers.get(random.nextInt(drivers.size()));
-
             // Извлекаем ученика из начала очереди с помощью poll()
-            String student = students.poll(); // poll() удаляет и возвращает первый элемент
-
+            String student = students.poll();
             // Добавляем водителя и ученика в списки в объекте Car
             car.addDriverAndStudent(driver, student);
-
-            System.out.println("Выезд: Водитель - " + driver + ", Ученик - " + student);
+            System.out.println("Выезд: Водитель - " + driver +
+                    ", Ученик - " + student);
         }
 
         // Отчёт по водителям: кто участвовал хотя бы в одном выезде
@@ -43,7 +41,6 @@ public class Main {
         System.out.println("\nОтчёт по водителям:");
         List<String> inactiveDrivers = new ArrayList<>();
 
-        // первый способ
         for (String driver : drivers) {
             if (!driversFromCar.contains(driver)) {
                 inactiveDrivers.add(driver);

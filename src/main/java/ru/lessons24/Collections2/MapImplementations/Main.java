@@ -41,8 +41,8 @@ public class Main {
         System.out.println("Значение для 'Apple': " + appleCount);
 
         // 7. Получение значения по несуществующему ключу (getOrDefault)
-        int mangoCount = fruitMap.getOrDefault("Mango", 0);
-        System.out.println("Значение для 'Mango' (по умолчанию 0): " + mangoCount);
+        int mangoCount = fruitMap.getOrDefault("Mango", -1);
+        System.out.println("Значение для 'Mango' (по умолчанию -1): " + mangoCount);
 
         // 8. Проверка наличия ключа (containsKey)
         boolean hasApple = fruitMap.containsKey("Apple");

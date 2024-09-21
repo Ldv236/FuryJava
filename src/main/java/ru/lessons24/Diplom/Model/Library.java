@@ -1,4 +1,7 @@
-package ru.lessons24.Diplom;
+package ru.lessons24.Diplom.Model;
+
+import ru.lessons24.Diplom.Exception.BookNotFoundException;
+import ru.lessons24.Diplom.Exception.UserNotFoundException;
 
 import java.util.*;
 import java.util.function.Function;
@@ -83,9 +86,12 @@ public class Library {
                 .toList();
     }
 
-    public Map<User, Integer> getUserActivity() {
+//    public Map<User, Integer> getUserActivity() {
+    public Map<Integer, List<User>> getUserActivity() {
         return users.values().stream()
-                .collect(Collectors.toMap(Function.identity(), User::getBorrowCount));
+//                .collect(Collectors.toMap(Function.identity(), User::getBorrowCount));
+                .collect(Collectors.groupingBy(User::getBorrowCount,
+                        Collectors.toList()));
     }
 
     public Map<User, Integer> getUserBooksCount() {

@@ -1,4 +1,4 @@
-package ru.lessons24.Diplom;
+package ru.lessons24.Diplom.Model;
 
 import java.util.ArrayList;
 import java.util.List;

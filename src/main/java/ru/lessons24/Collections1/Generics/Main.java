@@ -23,7 +23,7 @@ public class Main {
         for (int i = 0; i < list.size(); i++) {
 //            try {
 //                sum += (int) list.get(i);
-                sum += list.get(i);
+            sum += list.get(i);
 //            } catch (ClassCastException e) {
 //                System.out.println("Ошибка приведения типов: " + e.getMessage());
 //            }

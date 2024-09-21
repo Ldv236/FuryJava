@@ -7,8 +7,8 @@ import java.util.LinkedList;
 public class Main {
     public static void main(String[] args) {
         // === Работа с очередью (FIFO) для имен ===
-        LinkedList<String> nameQueue = new LinkedList<>();
-//        Deque<String> nameQueue = new ArrayDeque<String>();
+//        LinkedList<String> nameQueue = new LinkedList<>();
+        ArrayDeque<String> nameQueue = new ArrayDeque<>();
 
         // Добавление имен в конец очереди
         System.out.println("=== Очередь (FIFO) с именами ===");

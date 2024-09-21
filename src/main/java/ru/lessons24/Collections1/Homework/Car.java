@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Car {
-    private List<String> drivers;
-    private List<String> students;
+    private final List<String> drivers;
+    private final List<String> students;
 
     public Car() {
         this.drivers = new ArrayList<>();
@@ -13,9 +13,14 @@ public class Car {
     }
 
     // Добавление водителя и ученика в списки
-    public void addDriverAndStudent(String driver, String student) {
+    public void addDriverAndStudent(String driver,
+                                    String student) {
         drivers.add(driver);
         students.add(student);
+    }
+
+    public List<String> getStudents() {
+        return students;
     }
 
     // Получить список водителей
