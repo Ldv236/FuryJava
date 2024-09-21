@@ -10,7 +10,7 @@ public abstract class Transport implements Movable {
         this.year = year;
     }
 
-    // Сделать финальным типа нехуй, именно такой формат нужен, показать в подклассах, убрать нахер
+    // Сделать финальным, именно такой формат нужен, показать в подклассах, убрать
     public final void describe() {
         System.out.println("Transport: " + model + " (" + year + ")");
     }
