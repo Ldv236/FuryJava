@@ -24,10 +24,10 @@ public class DoubleArrayTaskColor {
                 {1, 0, 1}
         };
 
-        int sr = 1, sc = 1; // Начальная позиция (строка 1, столбец 1)
+        int startRow = 1, startColumn = 1; // Начальная позиция (строка 1, столбец 1)
         int newColor = 2;   // Новый цвет
 
-        floodFill(image, sr, sc, newColor);
+        floodFill(image, startRow, startColumn, newColor);
 
         // Вывод измененного изображения
         for (int[] row : image) {
@@ -38,27 +38,29 @@ public class DoubleArrayTaskColor {
         }
     }
 
-    public static void floodFill(int[][] image, int sr, int sc, int newColor) {
-        int currentColor = image[sr][sc];
+    public static void floodFill(int[][] image, int startRow, int startColumn, int newColor) {
+        int currentColor = image[startRow][startColumn];
         // Если цвет уже совпадает с новым, ничего не делаем
         if (currentColor != newColor) {
-            dfs(image, sr, sc, currentColor, newColor);
+            dfs(image, startRow, startColumn, currentColor, newColor);
         }
     }
 
-    private static void dfs(int[][] image, int i, int j, int currentColor, int newColor) {
+    private static void dfs(int[][] image, int row, int column, int currentColor, int newColor) {
         // Проверка выхода за пределы массива или если цвет не совпадает
-        if (i < 0 || i >= image.length || j < 0 || j >= image[0].length || image[i][j] != currentColor) {
+        if (row < 0 || row >= image.length ||
+                column < 0 || column >= image[0].length ||
+                image[row][column] != currentColor) {
             return;
         }
 
         // Меняем цвет текущей ячейки
-        image[i][j] = newColor;
+        image[row][column] = newColor;
 
         // Рекурсивно вызываем dfs для соседних ячеек (вверх, вниз, влево, вправо)
-        dfs(image, i - 1, j, currentColor, newColor); // Вверх
-        dfs(image, i + 1, j, currentColor, newColor); // Вниз
-        dfs(image, i, j - 1, currentColor, newColor); // Влево
-        dfs(image, i, j + 1, currentColor, newColor); // Вправо
+        dfs(image, row - 1, column, currentColor, newColor); // Вверх
+        dfs(image, row + 1, column, currentColor, newColor); // Вниз
+        dfs(image, row, column - 1, currentColor, newColor); // Влево
+        dfs(image, row, column + 1, currentColor, newColor); // Вправо
     }
 }

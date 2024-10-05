@@ -51,4 +51,23 @@ public class Palindrome {
             System.out.println("Not a palindrome");
         }
     }
+
+    static void isPalindromeDigit2(int t) {
+        boolean isPalindrome = true;
+        int count = 0;
+        for (int i = t; i != 0; i /= 10) {
+            count++;
+        }
+        for (int i = t; i != 0; i /= 10) {
+            int indexEnd = (i % 10); //последняя цифра
+            int x = t / (int) Math.pow(10, (count - 1));
+            int indexBegin = x % 10;      //первая цифра
+            if (indexBegin != indexEnd) {
+                isPalindrome = false;
+            }
+            count--;   //уменьшение порякда деления
+        }
+        String answer = isPalindrome ? t + " это палиндром" : t + " это не палиндром";
+        System.out.println(answer);
+    }
 }

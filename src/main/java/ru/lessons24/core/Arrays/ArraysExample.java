@@ -74,4 +74,32 @@ public class ArraysExample {
         }
         System.out.println("\nМаксимальный элемент: " + max);
     }
+
+    static int findVowelCount(char[] chars) {
+        //char[] chars = new char[]{'a', 'B', 'i', 't', 'E', 'r'}; //n = 6
+        char[] checkArray = {'a', 'e', 'i', 'o', 'u'};  //m = 5          O(n*m)
+        int vowelCount = 0;
+
+        for (int i = 0; i < chars.length; i++) {
+            for (int j = 0; j < checkArray.length; j++) {
+                if (Character.toLowerCase(chars[i]) == checkArray[j]) {
+                    vowelCount++;
+                }
+            }
+        }
+
+        return vowelCount;
+    }
+
+    static int findDoubled(char[] chars) {
+        //char[] chars = new char[]{'a', 'B', 'i', 't', 'E', 'r'}; //n = 6   O(n*n)
+        int doubleCount = 0;
+
+        for (int i = 0; i < chars.length; i++) {
+            for (int j = 0; j < chars.length; j++) {
+                //какие-то проверки, подсчеты
+            }
+        }
+        return doubleCount;
+    }
 }

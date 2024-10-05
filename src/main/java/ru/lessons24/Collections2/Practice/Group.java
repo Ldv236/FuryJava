@@ -1,6 +1,7 @@
 package ru.lessons24.Collections2.Practice;
 
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Group {
@@ -11,8 +12,8 @@ public class Group {
     }
 
     // Метод для добавления студента в группу
-    public void addStudent(int id, Student student) {
-        students.put(id, student);
+    public void addStudent(Student student) {
+        students.put(student.getId(), student);
     }
 
     // Метод для удаления студента из группы
@@ -54,7 +55,6 @@ public class Group {
 
     public Map<Student, Double> getAverageGrades() {
         return students.values().stream()
-                .collect(Collectors.toMap(s -> s, s -> s.getAverageGrade()));
-//                .collect(Collectors.toMap(Function.identity(), Student::getAverageGrade));
+                .collect(Collectors.toMap(Function.identity(), Student::getAverageGrade));
     }
 }

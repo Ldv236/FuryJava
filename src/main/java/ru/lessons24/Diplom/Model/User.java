@@ -28,6 +28,11 @@ public class User {
         this.name = name;
     }
 
+    @Override
+    public String toString() {
+        return "{" + id + ", " + name + '}';
+    }
+
     public void addBook(Book book) {
         books.add(book);
         book.setAvailable(false);
@@ -47,8 +52,4 @@ public class User {
         return books;
     }
 
-    @Override
-    public String toString() {
-        return "{" + id + ", " + name + '}';
-    }
 }

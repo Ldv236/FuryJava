@@ -46,7 +46,8 @@ public class Main {
     }
 
     // 1. Метод объединения и сортировки двух списков чисел
-    public static List<Integer> mergeAndSortLists(List<Integer> list1, List<Integer> list2) {
+    public static List<Integer> mergeAndSortLists(List<Integer> list1,
+                                                  List<Integer> list2) {
         ArrayList<Integer> mergedList = new ArrayList<>(list1);
         mergedList.addAll(list2); // Объединение списков
         Collections.sort(mergedList); // Сортировка списка
@@ -54,7 +55,8 @@ public class Main {
     }
 
     // 2. Метод поиска общих элементов строк
-    public static List<String> findCommonElements(List<String> list1, List<String> list2) {
+    public static List<String> findCommonElements(List<String> list1,
+                                                  List<String> list2) {
         ArrayList<String> commonElements = new ArrayList<>(list1);
         for (String str : list1) {
             for (String str2 : list2) {
@@ -63,7 +65,6 @@ public class Main {
                 }
             }
         }
-//        commonElements.retainAll(list2); // Оставляем только общие элементы
         return commonElements;
     }
 
@@ -71,7 +72,7 @@ public class Main {
     public static int countTotalElements(List<List<Integer>> listOfLists) {
         int totalCount = 0;
         for (List<Integer> sublist : listOfLists) {
-            totalCount += sublist.size(); // Суммируем размер каждого вложенного списка
+            totalCount += sublist.size();
         }
         return totalCount;
     }

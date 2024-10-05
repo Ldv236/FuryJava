@@ -8,10 +8,23 @@ import java.util.TreeMap;
 public class Main {
     public static void main(String[] args) {
 
+        Map<String, String> dictionary = new HashMap<>();
+        dictionary.put("Wrapper", "Обертка");
+        dictionary.put("Array", "Массив");
+        dictionary.put("List", "Список");
+        dictionary.put("Link", "Ссылка");
+        dictionary.put("Map", "Карта, словарь, ассоциативный массив");
+
+        System.out.println("Перевод Wrapper - " + dictionary.get("Wrapper"));
+        System.out.println("Перевод Link - " + dictionary.get("Link"));
+        System.out.println("Перевод Map - " + dictionary.get("Map"));
+        System.out.println();
+
+
         // Создание HashMap
-//        Map<String, Integer> fruitMap = new HashMap<>();
+        Map<String, Integer> fruitMap = new HashMap<>();
 //        Map<String, Integer> fruitMap = new LinkedHashMap<>();
-        Map<String, Integer> fruitMap = new TreeMap<>();
+//        Map<String, Integer> fruitMap = new TreeMap<>();
 
         // 1. Вставка элементов (put)
         fruitMap.put("Banana", 15);
@@ -24,8 +37,9 @@ public class Main {
         System.out.println("После обновления 'Apple': " + fruitMap);
 
         // 3. Вставка с проверкой, если ключ отсутствует (putIfAbsent)
+        fruitMap.putIfAbsent("Apple", 25);
         fruitMap.putIfAbsent("Grapes", 25);
-        System.out.println("После putIfAbsent 'Grapes': " + fruitMap);
+        System.out.println("После putIfAbsent 'Apple': " + fruitMap);
 
         // 4. Удаление элемента по ключу (remove)
         fruitMap.remove("Banana");
@@ -42,7 +56,7 @@ public class Main {
 
         // 7. Получение значения по несуществующему ключу (getOrDefault)
         int mangoCount = fruitMap.getOrDefault("Mango", -1);
-        System.out.println("Значение для 'Mango' (по умолчанию -1): " + mangoCount);
+        System.out.println("Значение для 'Mango': " + mangoCount);
 
         // 8. Проверка наличия ключа (containsKey)
         boolean hasApple = fruitMap.containsKey("Apple");

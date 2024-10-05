@@ -43,13 +43,7 @@ public class Student {
     }
 
     public double getAverageGrade() {
-        int sum = 0;
-        for (Integer grade : grades) {
-            sum += grade;
-        }
-        return (double) sum / grades.size();
-
-//        return grades.stream().mapToDouble(x -> x).average().orElse(0);
+        return grades.stream().mapToDouble(x -> x).average().orElse(0);
     }
 
     @Override

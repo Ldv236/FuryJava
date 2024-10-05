@@ -1,5 +1,6 @@
 package ru.lessons24.Collections2.FunctionalsInterfaces;
 
+import java.util.Arrays;
 import java.util.function.*;
 
 public class FuncInterfacesDemo {
@@ -13,13 +14,16 @@ public class FuncInterfacesDemo {
         printUpperCase.accept("Hello"); // HELLO
 
         Supplier<Double> randomSupplier = () -> Math.random();
+//        Supplier<Double> randomSupplier = Math::random;
         System.out.println(randomSupplier.get()); // Выведет случайное число
 
         Function<String, Integer> stringLength = str -> str.length();
+//        Function<String, Integer> stringLength = String::length;
         System.out.println(stringLength.apply("Java")); // 4
 
-        Function<String, String> stringUpper = str -> str.toUpperCase();
-        System.out.println(stringUpper.apply("Java")); // 4
+        Function<String, String[]> stringUpper = str -> str.split(" ");
+//        Function<String, String> stringUpper = String::toUpperCase;
+        System.out.println(Arrays.toString(stringUpper.apply("Java one love"))); // 4
 
         // Еще один пример - конкатенация строки и числа
         BiFunction<String, Integer, String> concat = (str, num) -> {

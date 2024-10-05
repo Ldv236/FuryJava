@@ -27,6 +27,8 @@ public class Main {
         persons.add(person4);
         System.out.println("\nИсходный сет");
         System.out.println(persons);
+
+//         это уже после компараторов
         findPerson(persons, person1, person2, person3, person4);
 
         person1.setName("Dmitry");
