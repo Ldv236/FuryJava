@@ -1,4 +1,4 @@
-package ru.lessons24.OOP.Inheritance;
+package ru.lessons24.OOP.Abstraction2.model;
 
 public class Bike extends Transport {
     private boolean hasGears;
@@ -8,9 +8,6 @@ public class Bike extends Transport {
         this.hasGears = hasGears;
     }
 
-    /**
-     * Новое описание метода
-     */
     @Override
     public void describe() {
         System.out.println("Bike: " + model + " (" + year + "), Gears: " + (hasGears ? "Yes" : "No"));
@@ -23,5 +20,11 @@ public class Bike extends Transport {
 
     public void ringBell() {
         System.out.println("Ring! Ring!");
+    }
+
+    // Переопределение toString() с вызовом родительского метода
+    @Override
+    public String toString() {
+        return "Bike{" + super.toString() + ", hasGears=" + hasGears + "}";
     }
 }

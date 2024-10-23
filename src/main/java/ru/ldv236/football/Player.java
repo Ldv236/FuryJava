@@ -3,19 +3,33 @@ package ru.ldv236.football;
 public class Player {
     private int stamina;
 
-    private final static int MAX_STAMINA = 100;
+    private final static int MAX_STAMINA = 10;
     private final static int MIN_STAMINA = 0;
 
     static int countPlayers = 0;
 
+    public Player() {
+        stamina = MAX_STAMINA;
+    }
+
     public Player(int stamina) {
         this.stamina = stamina;
+//        if (countPlayers < 6) {
+//            countPlayers++;
+//        } else {
+//            System.out.println("игроков уже 6");
+            // но бля, объект все равно создается же, получается надо
+            // вызывать не конструктор напрямую, а транзитивно через метод с проверкой
+//        }
+    }
 
+    static Player addPlayer(int stamina) {
         if (countPlayers < 6) {
             countPlayers++;
-        } else {
-            System.out.println("игроков уже 6");
+            return new Player(stamina);
         }
+        System.out.println("нельзя добавить еще игрока, их уже 6");
+        return null;
     }
 
     public int getStamina() {
@@ -23,11 +37,10 @@ public class Player {
     }
 
     public void run() {
-        if (stamina == MIN_STAMINA) {
-            System.out.println("игрок уже устал");
-            return;
-        }
-
+//        if (stamina == MIN_STAMINA) {
+//            System.out.println("игрок уже устал");
+//            return;
+//        }
         stamina--;
 
         if (stamina == MIN_STAMINA) {

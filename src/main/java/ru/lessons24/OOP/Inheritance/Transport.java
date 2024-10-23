@@ -11,6 +11,10 @@ public class Transport {
     }
 
     // Метод для описания транспорта
+
+    /**
+     * Предоставялет описание объекта на основе имеющихся полей
+     */
     public void describe() {
         System.out.println("Transport: " + model + " (" + year + ")");
     }
