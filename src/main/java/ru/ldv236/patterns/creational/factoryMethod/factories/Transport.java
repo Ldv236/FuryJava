@@ -1,7 +1,5 @@
 package ru.ldv236.patterns.creational.factoryMethod.factories;
 
-import ru.ldv236.patterns.creational.factoryMethod.classes.Vehicle;
-
 // Абстрактный базовый класс с фабричным методом
 public abstract class Transport {
 
