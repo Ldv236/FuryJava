@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
@@ -82,5 +83,16 @@ public class Main {
                 .collect(Collectors.groupingBy(String::length));
         System.out.println("Grouped by length: " + groupedByLength);
         // Output: Grouped by length: {3=[Bob], 4=[John, Kate], 9=[Alexander]}
+
+//        map, flatMap, filter, sorted, reduce, collect, count, forEach, allMatch, anyMatch
+//        map -  <R> Stream<R> map(Function<? super T, ? extends R> mapper);
+//        flatMap- <R> Stream<R> flatMap(Function<? super T, ? extends Stream<? extends R>> mapper);
+//        filter - Stream<T> filter(Predicate<? super T> predicate);
+//        sorted - Stream<T> sorted(Comparator<? super T> comparator); или Stream<T> sorted();
+//        reduce - T reduce(T identity, BinaryOperator<T> accumulator);
+//        collect - <R, A> R collect(Collector<? super T, A, R> collector);
+//        count - long count();
+//        forEach - void forEach(Consumer<? super T> action);
+//        allMatch - boolean allMatch(Predicate<? super T> predicate);
     }
 }
