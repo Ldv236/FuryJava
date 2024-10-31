@@ -1,12 +1,16 @@
 package ru.ldv236.patterns.creational.builder;
 
+import java.util.LinkedList;
+
 public class Main {
     public static void main(String[] args) {
+        String hello = "Hello, World";
+
         StringBuilder builder = new StringBuilder();
-        builder.append("Hello");
-        builder.append(',');
-        builder.append("World!");
-        System.out.println(builder.toString());
+        builder.append(hello)
+                .delete(0, 6)
+                .reverse();
+        System.out.println(builder);
 
 
         House house = new House.Builder()

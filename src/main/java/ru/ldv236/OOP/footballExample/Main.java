@@ -4,25 +4,24 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        Player player1 = new Player(9);
-        Player.info();
-        Player player2 = new Player(9);
-        Player.info();
-        Player player3 = new Player(9);
-        Player player4 = new Player(8);
-        Player player5 = new Player(8);
-        Player player6 = new Player(8);
-        Player.info();
-//
-        Player player7 = new Player(100);//
-        Player.info();
+        Player player1 = Player.addPlayer(9);
+        Player player2 = Player.addPlayer(9);
+        Player player3 = Player.addPlayer(9);
+        Player player4 = Player.addPlayer(9);
+        Player player5 = Player.addPlayer(9);
+        Player player6 = Player.addPlayer(9);
+        Player player7 = Player.addPlayer(9);
 
         Random random = new Random();
-        for (int i = 0; i < 91; i++) {
+        for (int i = 0; i < 10; i++) {
             player1.run();
+            player2.run();
         }
         Player.info();
-//        playFootBall();
+
+        Player player8 = Player.addPlayer(9);
+        Player player9 = Player.addPlayer(9);
+        Player player10 = Player.addPlayer(9);
     }
 
 //    static void playFootBall() {

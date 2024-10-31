@@ -12,7 +12,7 @@ public class Player {
         stamina = MAX_STAMINA;
     }
 
-    public Player(int stamina) {
+    private Player(int stamina) {
         this.stamina = stamina;
 //        if (countPlayers < 6) {
 //            countPlayers++;
@@ -25,6 +25,7 @@ public class Player {
 
     static Player addPlayer(int stamina) {
         if (countPlayers < 6) {
+            System.out.println("Player count - " + countPlayers + ", добавляем еще одного");
             countPlayers++;
             return new Player(stamina);
         }
