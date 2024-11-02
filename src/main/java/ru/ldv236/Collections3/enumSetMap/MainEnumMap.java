@@ -1,4 +1,4 @@
-package ru.ldv236.Collection3.enumSetMap;
+package ru.ldv236.Collections3.enumSetMap;
 
 import java.util.EnumMap;
 

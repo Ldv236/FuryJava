@@ -1,4 +1,4 @@
-package ru.ldv236.Collection3.WeakHashMap;
+package ru.ldv236.Collections3.WeakHashMap;
 
 import java.util.Map;
 import java.util.WeakHashMap;

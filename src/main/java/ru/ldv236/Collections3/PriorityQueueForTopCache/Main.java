@@ -1,4 +1,4 @@
-package ru.ldv236.Collection3.PriorityQueueForTopCache;
+package ru.ldv236.Collections3.PriorityQueueForTopCache;
 
 public class Main {
     public static void main(String[] args) {

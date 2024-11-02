@@ -1,4 +1,4 @@
-package ru.ldv236.Collection3.IdentityHashMap;
+package ru.ldv236.Collections3.IdentityHashMap;
 
 import java.util.IdentityHashMap;
 import java.util.Map;
