@@ -5,17 +5,17 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-
-        // Создание списка
-//        List list = new ArrayList<>();
-        List<Integer> list = new ArrayList<>();
         Integer number = 123;
         String name = "Alice";
         Car car = new Car("Lada");
 
+        // Создание списка
+        List list = new ArrayList<>();
+//        List<Integer> list = new ArrayList<>();
+
         list.add(number);
-//        list.add(name);
-//        list.add(car);
+        list.add(name);
+        list.add(car);
         list.add(100);
         list.add(8);
 
@@ -23,7 +23,7 @@ public class Main {
         for (int i = 0; i < list.size(); i++) {
 //            try {
 //                sum += (int) list.get(i);
-            sum += list.get(i);
+//            sum += list.get(i);
 //            } catch (ClassCastException e) {
 //                System.out.println("Ошибка приведения типов: " + e.getMessage());
 //            }

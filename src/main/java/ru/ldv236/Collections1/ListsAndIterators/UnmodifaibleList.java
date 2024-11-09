@@ -6,7 +6,7 @@ import java.util.List;
 
 public class UnmodifaibleList {
     public static void main(String[] args) {
-        List<String> unmodifaibleList;
+        List<Object> unmodifaibleList;
 //        unmodifaibleList = List.of("a", "b", "c");
 //        unmodifaibleList.add("d");
 

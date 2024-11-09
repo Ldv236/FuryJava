@@ -1,4 +1,4 @@
-package ru.tasks.threads;
+package ru.ldv236.core2.multithreading;
 
 public class Deadlock {
     public static void main(String[] args) {

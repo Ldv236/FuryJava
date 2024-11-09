@@ -14,6 +14,7 @@ public class Main {
         cars.add(new Car("Ford"));
         cars.add(new Car("Toyota"));
         System.out.println(cars);
+        List<Car> subCars = cars.subList(1, 3);
 
         Car[] carsArray = cars.toArray(new Car[cars.size()]);
         System.out.println(Arrays.toString(carsArray));
