@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class threads5Executor {
+public class threads9Executor {
     public static void main(String[] args) throws InterruptedException {
         //пул с одним потоком (это потом)
 //        ExecutorService executor = Executors.newSingleThreadExecutor();

@@ -2,7 +2,7 @@ package ru.ldv236.core2.multithreading.base;
 
 import java.util.concurrent.*;
 
-public class threads6CallableFuture {
+public class threads91CallableFuture {
 //    У экзекьюторов есть ещё одно преимущество перед созданием потоков вручную.
 //    Это возможность отследить статус задачи и получить результат:
 //
