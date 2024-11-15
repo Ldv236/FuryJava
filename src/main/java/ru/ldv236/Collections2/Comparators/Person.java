@@ -1,5 +1,6 @@
 package ru.ldv236.Collections2.Comparators;
 
+import java.util.Comparator;
 import java.util.Objects;
 
 public class Person implements Comparable<Person> {
@@ -45,8 +46,16 @@ public class Person implements Comparable<Person> {
         return Objects.hashCode(name);
     }
 
+//    @Override
+//    public int compareTo(Person o) {
+//        return this.name.compareTo(o.name);
+//
+//    }
+
     @Override
     public int compareTo(Person o) {
-        return this.name.compareTo(o.name);
+        return Comparator.comparing(Person::getName)
+                .thenComparing(Person::getAge)
+                .compare(this, o);
     }
 }
