@@ -40,15 +40,4 @@ public final class ImmutableClass {
         }
         return copy;
     }
-
-    // Предположим, что MutableObject - это изменяемый класс с соответствующим конструктором копирования
-    static class MutableObject {
-        private int data;
-
-        public MutableObject(MutableObject other) {
-            this.data = other.data;
-        }
-
-        // Дополнительные методы...
-    }
 }

@@ -4,14 +4,17 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        // Почему нельзхя менять элементы сета (и также ключи мапы) - после изменения они просто не находятся,
-        // т.к. изменился хэш-код, удалиться тоже не сможет (в триСете вероятность меньше, но тоже лажа)
+        // Почему нельзхя менять элементы сета (и также ключи мапы)
+        // - после изменения они просто не находятся,
+        // т.к. изменился хэш-код, удалиться тоже не сможет
+        // (в триСете вероятность меньше, но тоже лажа)
         Set<Person> persons = new TreeSet<>();
         // типа то же самое, как и с натуральным порядком
 //        Set<Person> persons = new TreeSet<>(new PersonNameComparator());
         // то же, но в обратном порядке
 //        Set<Person> persons = new TreeSet<>(new PersonNameReverseComparator());
-        // ебучие глаза! Лена потерялясь из-за повтора года! еще и контейнс показывает тру для любого человека 35-лет
+        // ебучие глаза! Лена потерялясь из-за повтора года!
+        // еще и контейнс показывает тру для любого человека 35-лет
 //        Set<Person> persons = new TreeSet<>(new PersonAgeComparator());
 //        Set<Person> persons = new TreeSet<>(new PersonAgeReverseComparator());
 //        Set<Person> persons = new TreeSet<>(new PersonAgeNameComparator());

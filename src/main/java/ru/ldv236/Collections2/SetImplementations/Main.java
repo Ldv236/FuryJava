@@ -2,6 +2,7 @@ package ru.ldv236.Collections2.SetImplementations;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,7 +10,11 @@ public class Main {
         // Создание Set для хранения имён
         Set<String> nameSet = new HashSet<>();
 //        Set<String> nameSet = new LinkedHashSet<>();
-//        Set<String> nameSet = new TreeSet<>();
+
+//        TreeSet<String> nameSet = new TreeSet<>();
+//        nameSet.lower("");
+//        nameSet.higher("");
+
 
         // 1. Добавление имён (add)
         nameSet.add("John");
@@ -73,5 +78,7 @@ public class Main {
         Set<String> differenceSet = new HashSet<>(nameSet);
         differenceSet.removeAll(anotherNamesSet);
         System.out.println("Разность множеств (nameSet - anotherNamesSet): " + differenceSet);
+
+
     }
 }
