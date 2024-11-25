@@ -1,7 +1,7 @@
 package ru.ldv236.OOP.GC;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         System.out.println("Creating objects...");
 
@@ -26,11 +26,17 @@ public class Main {
         System.gc();  // Запрашиваем сборку мусора
 
         // Задержка, чтобы дать время сборщику мусора сработать
-        try {
-            Thread.sleep(2000);  // Спим 2 секунды
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Thread.sleep(2000);  // Спим 2 секунды
+
+        // обнуляем массив, чтобы не было ссылок на объекты
+        garbageCollectionDemos = null;
+
+        // Явный запрос на сборку мусора
+        System.out.println("Requesting garbage collection...");
+        System.gc();  // Запрашиваем сборку мусора
+
+        // Задержка, чтобы дать время сборщику мусора сработать
+        Thread.sleep(2000);  // Спим 2 секунды
 
         System.out.println("End of program.");
     }
