@@ -1,16 +1,16 @@
 package ru.ldv236.Collections2.streamExample;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import com.sun.source.tree.Tree;
+
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
         //получить из этих коллекций мапу с комментариями каждого юзера (ключ - юзер, а не его id, значение - лист комментов со всех постов)
-        List<Comment> commentsSource = List.of(new Comment(1l), new Comment(2l));
-        List<Comment> commentsSource2 = List.of(new Comment(2l), new Comment(2l));
+        List<Comment> commentsSource = List.of(new Comment("b", 1l), new Comment("a", 2l));
+        List<Comment> commentsSource2 = List.of(new Comment("d", 2l), new Comment("c", 2l));
         List<Post> posts = List.of(new Post(commentsSource), new Post(commentsSource2));
         List<User> users = List.of(new User(1l), new User(2l));
 
@@ -32,22 +32,25 @@ public class Main {
 
         // пробуем партишинингБай - мапа с разделением на два списка с ключами тру и фальш
         // просто для эксперимента Создаем карту SomeCondition -> Set<Comment>
-        Map<Boolean, Set<Comment>> result2 = posts.stream() // сначала у нас тут стрим постов
-            .flatMap(p -> p.getComments().stream()) // из каждого поста достаем лист комментов, переводим в стрим, это всё соединяется в один стрим
-            .filter(c -> userMap.containsKey(c.getUserId())) // Фильтруем комментарии, чтобы убедиться, что для userId существует пользователь
-            .collect(Collectors.partitioningBy(
-                c -> c.getUserId() > 1,
-                Collectors.toSet())); //мапа с двумя ключами - тру/фальш и соотв. листы по условию
+//        Map<Boolean, Set<Comment>> result2 = posts.stream() // сначала у нас тут стрим постов
+//            .flatMap(p -> p.getComments().stream()) // из каждого поста достаем лист комментов, переводим в стрим, это всё соединяется в один стрим
+//            .filter(c -> userMap.containsKey(c.getUserId())) // Фильтруем комментарии, чтобы убедиться, что для userId существует пользователь
+//            .collect(Collectors.partitioningBy(
+//                c -> c.getUserId() > 1,
+////                Collectors.toSet()
+//                Collectors.toCollection(() -> new TreeSet<>((c1, c2) -> c2.getText().compareTo(c1.getText())))
+//            )); //мапа с двумя ключами - тру/фальш и соотв. листы по условию
 
         // Выводим результат
         result.forEach((u, c) -> {
             System.out.println("User: " + u.getId() + " has comments: " + c);
         });
 
-        // Выводим результат 2
-        result2.forEach((b, c) -> {
-            System.out.println("UserId > 1: " + b + " has comments: " + c);
-        });
+//         Выводим результат 2
+//        result2.forEach((b, c) -> {
+//            System.out.println("UserId > 1: " + b + " has comments: " + c);
+//        });
+
     }
 }
 
@@ -64,10 +67,16 @@ class Post {
 }
 
 class Comment {
+    private String text;
     private Long userId;
 
-    public Comment(Long userId) {
+    public Comment(String text, Long userId) {
+        this.text = text;
         this.userId = userId;
+    }
+
+    public String getText() {
+        return text;
     }
 
     public Long getUserId() {
@@ -76,9 +85,7 @@ class Comment {
 
     @Override
     public String toString() {
-        return "Comment{" +
-            "userId=" + userId +
-            '}';
+        return "Comment{" + text + ", userId=" + userId + '}';
     }
 }
 
@@ -91,5 +98,10 @@ class User {
 
     public Long getId() {
         return id;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" + id + '}';
     }
 }

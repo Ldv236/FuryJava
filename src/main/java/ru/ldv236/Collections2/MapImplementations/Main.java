@@ -102,5 +102,7 @@ public class Main {
 
         fruitMap.putAll(anotherMap);
         System.out.println("\nПосле копирования из anotherMap: " + fruitMap);
+
+        System.out.println(fruitMap.get("Lemons"));
     }
 }

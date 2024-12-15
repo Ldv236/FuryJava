@@ -64,9 +64,6 @@ public class Library {
         return books.values()
                 .stream()
                 .toList();
-//        return books.values().stream()
-//                .sorted(Comparator.comparing(Book::getTitle))
-//                .toList();
     }
 
     // Вывод доступных книг

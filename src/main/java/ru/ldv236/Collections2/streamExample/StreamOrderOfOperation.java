@@ -6,7 +6,7 @@ import java.util.List;
 public class StreamOrderOfOperation {
     public static void main(String[] args) {
 
-        final List<String> test = List.of("one", "two", "three");
+        final List<String> test = List.of("raz", "dva", "tri");
 
         //first example
         test.stream()
