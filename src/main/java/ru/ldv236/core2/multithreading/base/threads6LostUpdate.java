@@ -9,14 +9,14 @@ public class threads6LostUpdate {
         Test test = new Test();
 
         Thread thread1 = new Thread(() -> {
-            for (int i = 0; i < 1000; i++) {
+            for (int i = 0; i < 10000; i++) {
                 test.increment();
 //                System.out.println(Thread.currentThread().getName() + ": " + i + " - " + test.getCount());
             }
         });
 
         Thread thread2 = new Thread(() -> {
-            for (int i = 0; i < 1000; i++) {
+            for (int i = 0; i < 10000; i++) {
                 test.increment();
 //                System.out.println(Thread.currentThread().getName() + ":   " + i + " - " + test.getCount());
             }
