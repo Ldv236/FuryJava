@@ -1,4 +1,4 @@
-package ru.ldv236.Diplom.Model;
+package ru.ldv236.OOP2.BookLibrary.Model;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,8 +1,8 @@
-package ru.ldv236.Diplom;
+package ru.ldv236.OOP2.BookLibrary;
 
-import ru.ldv236.Diplom.Model.Book;
-import ru.ldv236.Diplom.Model.Library;
-import ru.ldv236.Diplom.Model.User;
+import ru.ldv236.OOP2.BookLibrary.Model.Book;
+import ru.ldv236.OOP2.BookLibrary.Model.Library;
+import ru.ldv236.OOP2.BookLibrary.Model.User;
 
 import java.util.List;
 import java.util.Map;

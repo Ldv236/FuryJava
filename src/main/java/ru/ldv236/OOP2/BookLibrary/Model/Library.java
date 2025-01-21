@@ -1,7 +1,7 @@
-package ru.ldv236.Diplom.Model;
+package ru.ldv236.OOP2.BookLibrary.Model;
 
-import ru.ldv236.Diplom.Exception.BookNotFoundException;
-import ru.ldv236.Diplom.Exception.UserNotFoundException;
+import ru.ldv236.OOP2.BookLibrary.Exception.BookNotFoundException;
+import ru.ldv236.OOP2.BookLibrary.Exception.UserNotFoundException;
 
 import java.util.*;
 import java.util.function.Function;

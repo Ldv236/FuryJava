@@ -1,4 +1,4 @@
-package ru.ldv236.Diplom.Model;
+package ru.ldv236.OOP2.BookLibrary.Model;
 
 public class Book {
     private final int id;

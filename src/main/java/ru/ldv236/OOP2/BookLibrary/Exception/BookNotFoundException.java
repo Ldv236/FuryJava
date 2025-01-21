@@ -1,4 +1,4 @@
-package ru.ldv236.Diplom.Exception;
+package ru.ldv236.OOP2.BookLibrary.Exception;
 
 public class BookNotFoundException  extends RuntimeException {
 
