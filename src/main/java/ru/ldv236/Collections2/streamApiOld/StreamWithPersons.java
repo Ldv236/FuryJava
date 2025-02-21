@@ -21,7 +21,8 @@ public class StreamWithPersons {
                 .collect(Collectors.toList());
         System.out.println("People older than 25: " + olderThan25);
 
-        Map<String, Integer> peopleMap = people.stream().collect(Collectors.toMap(
+        Map<String, Integer> peopleMap =
+                people.stream().collect(Collectors.toMap(
                 Person::getName,
                 Person::getAge,
 //                (p1, p2) -> null, //repeatable key -> entry be null, wow
@@ -34,7 +35,8 @@ public class StreamWithPersons {
 
 
 
-        List<String> names = people.stream()
+        List<String> names =
+                people.stream()
                 .map(Person::getName)
                 .collect(Collectors.toList());
 
