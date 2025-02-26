@@ -37,5 +37,9 @@ public class Main {
 //        for (String name : names) {
 //            System.out.println("Имя: " + name);
 //        }
+
+        Boolean source = false;
+        boolean target = false;
+        System.out.println(source == target);
     }
 }
